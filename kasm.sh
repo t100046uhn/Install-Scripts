@@ -1,3 +1,4 @@
+#Tested on a clean Debian 11
 sudo dd if=/dev/zero bs=1M count=5120 of=/mnt/5GiB.swap
 sudo chmod 600 /mnt/5GiB.swap
 sudo mkswap /mnt/5GiB.swap
