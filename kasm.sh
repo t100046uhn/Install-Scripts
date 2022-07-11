@@ -1,4 +1,6 @@
+#Installation of Kasm Workspaces
 #Tested on a clean Debian 11
+#!/bin/bash
 sudo dd if=/dev/zero bs=1M count=5120 of=/mnt/5GiB.swap
 sudo chmod 600 /mnt/5GiB.swap
 sudo mkswap /mnt/5GiB.swap
