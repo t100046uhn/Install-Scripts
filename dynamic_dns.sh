@@ -1,4 +1,5 @@
 #!/bin/bash
+#set this to run as a cron job
 
 #Script requires 4 files to work
 #username file
