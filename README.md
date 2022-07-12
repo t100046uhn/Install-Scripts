@@ -1,3 +1,3 @@
-# Install-Scripts
+# bash_scripts
 *Please review all scripts before using.*  
-This Repository contains quick scripts for installing various applications.
+This Repository contains various bash scripts
