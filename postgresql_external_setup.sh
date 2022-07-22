@@ -13,6 +13,10 @@ systemctl status postgresql
 
 read -p "Press enter to continue"
 
+#to change default postgres database user password
+#sudo -u postgres psql postgres
+#\password postgres
+
 #Create a backup of the config file
 cp /etc/postgresql/14/main/postgresql.conf /etc/postgresql/14/main/postgresql.conf.bak
 
