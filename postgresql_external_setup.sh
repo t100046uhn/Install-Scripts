@@ -21,13 +21,8 @@ sed -i "s/#listen_addresses = 'localhost'/listen_addresses = '*'/g" /etc/postgre
 #Create a backup of the pg_hba config file
 cp /etc/postgresql/14/main/pg_hba.conf /etc/postgresql/14/main/pg_hba.conf.bak
 
-#sed -i '/^local/s/peer/trust/' /etc/postgresql/14/main/pg_hba.conf
-#sed -i '/^host/s/ident/md5/' /etc/postgresql/14/main/pg_hba.conf
-sed -i "$ a #" /etc/postgresql/14/main/pg_hba.conf
-sed -i "$ a #Manual Entries Below:" /etc/postgresql/14/main/pg_hba.conf
-sed -i "$ a # TYPE  DATABASE        USER    ADDRESS         METHOD" /etc/postgresql/14/main/pg_hba.conf
-sed -i "$ a #" /etc/postgresql/14/main/pg_hba.conf
-sed -i "$ a host    all             all     0.0.0.0/0       md5" /etc/postgresql/14/main/pg_hba.conf
-sed -i "$ a host    all             all     :/0             md5" /etc/postgresql/14/main/pg_hba.conf
+echo '#Manual Entries Below' | sudo tee -a /etc/postgresql/14/main/pg_hba.conf
+echo 'host  all   all   0.0.0.0/0   md5' | sudo tee -a /etc/postgresql/14/main/pg_hba.conf
+echo 'host  all   all   ::/0        md5' | sudo tee -a /etc/postgresql/14/main/pg_hba.conf
 
 systemctl restart postgresql
