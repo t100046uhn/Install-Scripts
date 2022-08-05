@@ -1,0 +1,5 @@
+#Generating ED25519 ssh keys
+ssh-keygen -t ed25519
+
+#transferring ssh keys
+ssh-copy-id -i ~/.ssh/*.pub <username>@<host>
