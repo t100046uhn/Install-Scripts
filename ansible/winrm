@@ -1,0 +1,3 @@
+#PowerShell Command
+Enable-PSRemoting -force 
+
