@@ -7,7 +7,7 @@ ssh-copy-id -i ~/.ssh/*.pub <username>@<host>
 #starting the ssh agent
 eval `ssh-agent`
 
-#adding the private key
+#adding the private key (file path is optional)
 ssh-add <path-to-file>
 
 #stopping the ssh agent
